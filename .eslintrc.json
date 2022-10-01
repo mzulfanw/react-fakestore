@@ -24,7 +24,7 @@
     "react/prop-types": 2,
     "strict": 0,
     "template-curly-spacing": "off",
-    "indent": [
+    "@typescript-eslint/indent": [
       "error",
       2,
       {
