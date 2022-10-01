@@ -1,14 +1,18 @@
 import React from 'react'
 import { MantineProvider } from '@mantine/core'
-import { Button } from './components/shared'
+import {
+  RouterProvider
+} from 'react-router-dom'
+import { router } from './lib/router'
 
 function App() {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
-      <Button
-        text='heloo'
-        onClick={() => { alert('heloo there') }}
-        variant='filled'
+    <MantineProvider
+      withGlobalStyles
+      withNormalizeCSS
+    >
+      <RouterProvider
+        router={router}
       />
     </MantineProvider>
 
