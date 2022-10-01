@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button as MantineButton } from '@mantine/core'
+import { Button as MantineButton, Sx } from '@mantine/core'
 
 
 type Variant = 'gradient' | 'filled' | 'outline' | 'light' | 'white' | 'default' | 'subtle' | undefined
@@ -7,7 +7,8 @@ type Variant = 'gradient' | 'filled' | 'outline' | 'light' | 'white' | 'default'
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string,
   variant: Variant,
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
+  onClick?: React.MouseEventHandler<HTMLButtonElement>,
+  sx?: Sx
 }
 
 function Button({
