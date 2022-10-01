@@ -1,16 +1,19 @@
 import React from 'react'
-import { Card as MantineCard } from '@mantine/core'
+import { Card as MantineCard, CardProps } from '@mantine/core'
 
 
-interface Card {
+interface Card extends CardProps {
   children: React.ReactNode
 }
 
 function Card({
-  children
+  children,
+  ...props
 }: Card) {
   return (
-    <MantineCard>
+    <MantineCard
+      {...props}
+    >
       {children}
     </MantineCard>
   )
