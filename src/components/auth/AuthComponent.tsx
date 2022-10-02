@@ -1,8 +1,14 @@
 import { Container } from '@mantine/core'
 import React from 'react'
-import { Card } from '../shared'
+import { Button, Card } from '../shared'
 
-function AuthComponent() {
+interface AuthProps {
+  handleLogin: React.MouseEventHandler
+}
+
+function AuthComponent({
+  handleLogin
+}: AuthProps) {
   return (
     <Container
 
@@ -10,7 +16,12 @@ function AuthComponent() {
       <Card
         shadow='sm'
       >
-        test
+        <Button
+          text='helo'
+          variant='filled'
+          onClick={handleLogin}
+        />
+        <input type='text' name='heloo' />
       </Card>
     </Container>
   )

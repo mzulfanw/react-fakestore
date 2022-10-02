@@ -7,7 +7,7 @@ type Variant = 'gradient' | 'filled' | 'outline' | 'light' | 'white' | 'default'
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text: string,
   variant: Variant,
-  onClick?: React.MouseEventHandler<HTMLButtonElement>,
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined,
   sx?: Sx
 }
 
