@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProductData } from '../../store/product/productStore'
+import { ProductData } from '../../interfaces/Api'
 import { Skeleton } from '../shared'
 
 interface HomeListProps {
