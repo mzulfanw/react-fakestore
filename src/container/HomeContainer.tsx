@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import HomeComponent from '../components/home/HomeComponent'
-import { fetchData } from '../store/action/Home'
+import { useProductStore } from '../store/product/productStore'
 
 function HomeContainer() {
-  const [data, setData] = useState([])
+  const productStore = useProductStore()
+  const product = productStore.product
 
   useEffect(() => {
-    fetchData()
-      .then((res) => setData(res?.data))
-      .catch((err) => console.log(err))
+    productStore.getProduct()
   }, [])
+
   return (
     <HomeComponent
-      data={data}
+      data={product}
     />
   )
 }
