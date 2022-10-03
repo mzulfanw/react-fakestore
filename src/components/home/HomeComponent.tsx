@@ -1,15 +1,21 @@
 import React from 'react'
+import { ProductData } from '../../store/product/productStore'
+import Layout from '../core/Layout'
+import HomeList from './HomeList'
 
 interface HomeProps {
-  data: never[]
+  data: ProductData[]
 }
 
 function HomeComponent({
   data
 }: HomeProps) {
-  console.log(data)
   return (
-    <p>test</p>
+    <Layout>
+      <HomeList
+        data={data}
+      />
+    </Layout>
   )
 }
 
