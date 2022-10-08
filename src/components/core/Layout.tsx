@@ -13,13 +13,6 @@ function Layout({
   return (
     <>
       <Container
-        size='sm'
-        sx={{
-          border: '5px solid #AED9E0',
-          margin: '20px auto',
-          borderRadius: '10px',
-          minHeight: '100vh'
-        }}
       >
         {/* Your application here */}
         {children}
