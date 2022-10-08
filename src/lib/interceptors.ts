@@ -6,7 +6,7 @@ const services: AxiosInstance = axios.create({
   headers: { 'X-Custom-Header': 'foobar' }
 })
 
-export const get = (url: string, params?: string) => {
+export const get = (url: string, params?: unknown) => {
   return services.get(`${url}`, {
     params
   })
