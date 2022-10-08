@@ -1,7 +1,8 @@
 import React from 'react'
 import { ProductData } from '../../interfaces/Api'
-import { Group, Image, SimpleGrid, Text } from '@mantine/core'
-import { Card } from '../shared'
+import { Group, Image, SimpleGrid, Space, Text } from '@mantine/core'
+import { Button, Card } from '../shared'
+import { useNavigate } from 'react-router-dom'
 import Badge from '../shared/ui/Badge'
 
 interface HomeListProps {
@@ -11,6 +12,12 @@ interface HomeListProps {
 function HomeList({
   data
 }: HomeListProps) {
+  const navigate = useNavigate()
+
+  const handleDetail = (id: number) => {
+    navigate(`/product/detail/${id}`)
+  }
+
   return (
     <SimpleGrid
       cols={2}
@@ -18,7 +25,7 @@ function HomeList({
       breakpoints={[
         { maxWidth: 980, cols: 3, spacing: 'md' },
         { maxWidth: 755, cols: 2, spacing: 'sm' },
-        { maxWidth: 600, cols: 2, spacing: 'sm' }
+        { maxWidth: 600, cols: 1, spacing: 'sm' }
       ]}
       sx={{
         width: '100%'
@@ -64,6 +71,15 @@ function HomeList({
                 {value.description}
               </Text>
             </Group>
+            <Space
+              mb={20}
+            />
+            <Button
+              text='Detail'
+              variant='filled'
+              onClick={() => { handleDetail(value.id) }}
+              fullWidth
+            />
           </Card>
         ))
       )}
