@@ -25,7 +25,7 @@ function HomeList({
       }}
     >
       {data?.length > 0 && (
-        data?.slice(0, 4).map((value, index) => (
+        data?.map((value, index) => (
           <Card
             key={index}
             style={{

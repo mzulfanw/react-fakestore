@@ -6,3 +6,9 @@ export interface ProductData {
   description: string,
   image: string
 }
+
+
+export interface Payload {
+  limit: number,
+  sort: string
+}
