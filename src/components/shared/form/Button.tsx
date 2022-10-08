@@ -1,14 +1,13 @@
 import React from 'react'
-import { Button as MantineButton, Sx } from '@mantine/core'
+import { Button as MantineButton, ButtonProps as MantineButtonProps } from '@mantine/core'
 
 
 type Variant = 'gradient' | 'filled' | 'outline' | 'light' | 'white' | 'default' | 'subtle' | undefined
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends MantineButtonProps {
   text: string,
   variant: Variant,
   onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined,
-  sx?: Sx
 }
 
 function Button({
