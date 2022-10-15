@@ -61,7 +61,7 @@
     "generator-star-spacing": [
       "off"
     ],
-    "no-unused-vars": "error",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "no-var": "error",
     "no-useless-escape": "off",
     "curly": "off",
