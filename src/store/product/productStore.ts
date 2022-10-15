@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import create from 'zustand'
 import { ProductData } from '@/interfaces/Api'
 import { get } from '../../lib/interceptors'
@@ -8,8 +7,8 @@ import { Payload } from '@/types/types'
 interface ProductState {
   product: ProductData[],
   detail: object,
-  getProduct: (payload: Payload) => void,
-  getDetailProduct: (id: string) => void
+  getProduct: (_payload: Payload) => void,
+  getDetailProduct: (_id: string) => void
 }
 
 
